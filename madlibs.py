@@ -51,16 +51,21 @@ def show_madlib_form():
     else:
         return render_template("game.html")
 
-@app.route('/madlib')
-def madlib_form():
+@app.route('/madlib', methods=['POST', 'GET'])
+def show_madlib():
     """Show madlib form"""
+    if request.method == 'POST':
+        animal = request.form.getlist('animal[]')
+    print(type(animal))
+    print(animal)
+    print("/n/n***************************************h******h********")
     color = request.args.get("color")
     noun = request.args.get("noun")
     person = request.args.get("person")
     adjective = request.args.get("adjective")
 
-    return render_template("game.html", color=color, noun=noun, person=person,
-                             adjective=adjective)
+    return render_template("madlib.html", color=color, noun=noun, person=person,
+                             adjective=adjective, animal=animal)
 
 
 if __name__ == '__main__':

@@ -6,35 +6,41 @@
 <body>
     Let's play a game of MadLibs!
     <div>
-    <form action="/show_madlib">
-      Please Select a Color: 
-        <select> name="color">
+    <form action="/madlib">
+    Please Select a Color: 
+        <select name="color">
             <option value="red">Red</option>
             <option value="blue">Blue</option>
             <option value="yellow">Yellow</option>
         </select>
         <div>
-      Please Select a Noun:
-        <select> name="noun"
+    Please Select a Noun:
+        <select name="noun">
             <option value="ball">Ball</option>
             <option value="car">Car</option>
-            <option value="furby">Furby</option>
+            <option value="Furby">Furby</option>
         </select>
         <div>
-      Please Select a Person:
-        <select> name="person"
-            <option value="mom">Your Mom</option>
-            <option value="kara">Kara</option>
-            <option value="michelle">Michelle Obama</option>
+    Please Select a Person:
+        <select name="person">
+            <option value="Your Mom">Your Mom</option>
+            <option value="Kara">Kara</option>
+            <option value="Michelle Obama">Michelle Obama</option>
         </select>
         <div>
-      Please Select a Adjective:
-      <select value="adjective">
+    Please Select a Adjective:
+      <select name="adjective">
           <option value="hot">Hot</option>
           <option value="lazy">Lazy</option>
           <option value="crazy">Crazy</option>
       </select> 
       <p>
+      <input type="checkbox" name="animal" value="dog">Dog
+      <input type="checkbox" name="animal" value="moose">Moose
+      <input type="checkbox" name="animal" value="zebra">Zebra
+      <p>
+
+
     <input type="submit" value="Submit Madlibs!">
 
     </form>
